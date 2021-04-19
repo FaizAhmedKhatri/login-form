@@ -1,23 +1,23 @@
-import logo from './logo.svg';
+import React from 'react';
 import './App.css';
+import "bootstrap/dist/css/bootstrap.css";
+import {Row} from 'react-bootstrap';
+import LeftSide from "./components/LeftSide";
+import RightSide from "./components/RightSide";
+
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      
+      <Row className="landing">
+        <div className="col-md-6 col-xs-12">
+        <LeftSide />
+        </div>
+        <div className="col-md-6 col-xs-12">
+        <RightSide />
+        </div>
+      </Row>
     </div>
   );
 }
